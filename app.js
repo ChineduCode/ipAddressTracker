@@ -3,9 +3,15 @@ const mongoose = require('mongoose')
 const path = require('path')
 
 const app = express()
+
+//view engine
+app.set('view engine', 'ejs')
+
+//body parser
 app.use(express.urlencoded({extended: false}))
 
-app.set('view engine', 'ejs')
+//css
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', require('./routes/index'))
 
