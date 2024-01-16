@@ -9,4 +9,17 @@ body {
   align-items: flex-start;
   justify-content: center;
   font-family: "Rubik", sans-serif;
+  background-image: url("../images/pattern-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.container {
+  padding: 1rem;
+}
+.container .heading {
+  font-weight: 700;
+  font-size: 25px;
+  color: hsl(0, 0%, 100%);
 }/*# sourceMappingURL=style.css.map */
