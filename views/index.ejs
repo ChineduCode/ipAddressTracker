@@ -9,41 +9,43 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="heading"> IP Address Tracker </div>
-
-    <form action="/track" method="post">
-      <div class="form-control">
-        <input 
-          type="search" 
-          name="ip address" 
-          class="ip-address"
-          placeholder="Search for any IP address or domain"
-        >
-      </div>
-    </form>
-
-    <div class="content-container">
-      <div class="ip-address">
-        <div class="name">IP Address</div>
-        <div class="value"></div>
-      </div>
-      <div class="location">
-        <div class="name">Location</div>
-        <div class="value"></div>
-      </div>
-      <div class="timezone">
-        <div class="name">Timezone</div>
-        <div class="value"></div>
-      </div>
-      <div class="isp">
-        <div class="name">ISP</div>
-        <div class="">UTC <span class="value"> <!-- add offset value dynamically using the API --> </span> </div>
+  <main>
+    <div class="container">
+      <div class="heading"> IP Address Tracker </div>
+  
+      <form action="/track" method="post">
+        <div class="form-control">
+          <input 
+            type="search" 
+            name="ip address" 
+            class="ip-address"
+            placeholder="Search for any IP address or domain"
+          >
+        </div>
+      </form>
+  
+      <div class="content-container">
+        <div class="ip-address">
+          <div class="name">IP Address</div>
+          <div class="value"></div>
+        </div>
+        <div class="location">
+          <div class="name">Location</div>
+          <div class="value"></div>
+        </div>
+        <div class="timezone">
+          <div class="name">Timezone</div>
+          <div class="value"></div>
+        </div>
+        <div class="isp">
+          <div class="name">ISP</div>
+          <div class="">UTC <span class="value"> <!-- add offset value dynamically using the API --> </span> </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="map"></div>
-  
+    <div class="map"></div>
+
+  </main>
 </body>
 </html>
