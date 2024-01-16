@@ -5,14 +5,12 @@
 }
 
 body{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
     font-family: 'Rubik', sans-serif;
     background-image: url('../images/pattern-bg-mobile.png');
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     background-size: cover;
+    text-align: center;
 }
 
 .container{
@@ -25,6 +23,15 @@ body{
     }
 
     form{
-        .control{}
+        padding: 0 8%;
+        .form-control{
+            input{
+                border-radius: 15px;
+                margin: 1rem 0;
+                width: 100%;
+                padding: 15px;
+                font-size: 18px;
+            }
+        }
     }
 }
