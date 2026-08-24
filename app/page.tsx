@@ -335,11 +335,11 @@ export default function Home() {
                 aria-label="Location map"
             >
                 {data?.location.lat && data?.location.lng ? (
-                <Map lat={data.location.lat} lng={data.location.lng} />
+                    <Map lat={data.location.lat} lng={data.location.lng} />
                 ) : (
-                <div className="flex h-full w-full items-center justify-center bg-gray-100 text-dark-gray">
-                    {loading ? 'Loading map...' : 'No location data available'}
-                </div>
+                    <div className="flex h-full w-full items-center justify-center bg-gray-100 text-dark-gray">
+                        {loading ? 'Loading map...' : 'No location data available'}
+                    </div>
                 )}
             </section>
         </main>
