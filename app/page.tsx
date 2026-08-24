@@ -32,7 +32,7 @@ export default function Home() {
     const [query, setQuery] = useState('');
     const [data, setData] = useState<LocationData | null>(null);
     const [error, setError] = useState('');
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
 
 
     const fetchLocation = async (searchTerm = '') => {
