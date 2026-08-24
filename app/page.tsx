@@ -165,20 +165,20 @@ export default function Home() {
 
             {/* Info Cards */}
             <section
-                className="absolute left-1/2 top-[167px] z-20 w-[calc(100%-48px)] max-w-[1110px] -translate-x-1/2 rounded-[15px] bg-white px-6 py-[25px] shadow-lg sm:top-[200px] sm:grid sm:min-h-[161px] sm:grid-cols-4 sm:px-0 sm:py-[37px]"
+                className="absolute left-1/2 top-[167px] z-20 w-[calc(100%-48px)] max-w-[1110px] -translate-x-1/2 rounded-[15px] bg-white px-6 py-[25px] shadow-lg md:top-[200px] md:grid md:min-h-[161px] md:grid-cols-4 md:px-0 md:py-[37px]"
                 aria-label="IP address details"
             >
                 {details.map(([label, value], index) => (
                     <article
                         key={label}
-                        className={`text-center sm:px-8 sm:text-left ${
-                            index > 0 ? 'mt-[21px] sm:mt-0 sm:border-l sm:border-dark-gray/35' : ''
+                        className={`text-center md:px-8 md:text-left ${
+                            index > 0 ? 'mt-[21px] md:mt-0 md:border-l md:border-dark-gray/35' : ''
                         }`}
                     >
-                        <h2 className="m-0 mb-[7px] text-[0.63rem] font-bold uppercase tracking-[0.12em] text-dark-gray sm:mb-[13px] sm:text-[0.75rem]">
+                        <h2 className="m-0 mb-[7px] text-[0.63rem] font-bold uppercase tracking-[0.12em] text-dark-gray md:mb-[13px] md:text-[0.75rem]">
                             {label}
                         </h2>
-                        <p className="m-0 break-words text-[1.25rem] font-medium leading-[1.25] tracking-[-0.02em] sm:text-[1.6rem] sm:leading-[1.18]">
+                        <p className="m-0 break-words text-[1.25rem] font-medium leading-[1.25] tracking-[-0.02em] md:text-[1.6rem] md:leading-[1.18]">
                             {loading ? '...' : value}
                         </p>
                     </article>
