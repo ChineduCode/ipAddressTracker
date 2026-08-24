@@ -291,9 +291,9 @@ export default function Home() {
                         className="flex cursor-pointer items-center justify-center rounded-r-[15px] bg-black transition-colors hover:bg-[#3f3f3f] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-white disabled:cursor-not-allowed disabled:opacity-60"
                     >
                         {loading ? (
-                        <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                            <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
                         ) : (
-                        <img src="/images/icon-arrow.svg" width="11" height="14" alt="" />
+                            <img src="/images/icon-arrow.svg" width="11" height="14" alt="" />
                         )}
                     </button>
 
