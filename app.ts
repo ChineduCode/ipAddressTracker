@@ -1,8 +1,8 @@
-import express from "express";
+import express, { Application } from "express";
 import path from "path";
 import indexRoute from "./routes/index.js";
 
-const app = express();
+const app: Application = express();
 
 //view engine
 app.set('view engine', 'ejs')
