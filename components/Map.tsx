@@ -3,12 +3,13 @@
 import { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
 import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
-// Custom marker using the design asset
+
 const customIcon = L.icon({
     iconUrl: '/images/icon-location.svg',
     iconSize: [46, 56],
-    iconAnchor: [23, 56], // bottom center of the pin
+    iconAnchor: [23, 56],
 });
 
 interface MapProps {
