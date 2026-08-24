@@ -34,7 +34,7 @@ interface MapDetails {
 
 export default function Home() {
     const [query, setQuery] = useState('');
-    const [mapQuery, setMapQuery] = useState('Brooklyn, NY 10001');
+    const [mapQuery, setMapQuery] = useState<MapDetails>();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
