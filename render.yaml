@@ -2,4 +2,5 @@ services:
   - name: web
     envVars:
       NODE_ENV: production
+    buildCommand: npm run build
     startCommand: npm start
