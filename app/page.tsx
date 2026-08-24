@@ -28,7 +28,7 @@ export default function Home() {
 
         try {
             const res = await axios.get(
-                `https://geo.ipify.org/api/v2/country?apiKey=${process.env.NEXT_PUBLIC_IPIFY_API_KEY}&ipAddress=${searchTerm}`
+                `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.NEXT_PUBLIC_IPIFY_API_KEY}&ipAddress=${searchTerm}`
             );
             console.log(res.data)
         } catch (error) {
