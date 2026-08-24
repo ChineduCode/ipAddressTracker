@@ -10,6 +10,28 @@ const DEFAULT_DETAILS = [
     ['ISP', 'SpaceX Starlink'],
 ] as const;
 
+interface MapDetails {
+    as: {
+        asn: number
+        domain: string
+        name: string
+        route: string
+        type: string
+    }
+    ip: string
+    isp: string
+    location: {
+        city: string
+        country: string
+        geonameId: string
+        lat: number
+        lng: number
+        postalCode: string
+        region: string
+        timezone: string
+    }
+}
+
 export default function Home() {
     const [query, setQuery] = useState('');
     const [mapQuery, setMapQuery] = useState('Brooklyn, NY 10001');
@@ -68,7 +90,7 @@ export default function Home() {
                         className="h-[58px] bg-white min-w-0 rounded-l-[15px] border-0 px-6 text-[18px] outline-none placeholder:text-dark-gray focus-visible:ring-3 focus-visible:ring-inset focus-visible:ring-[#4f8cff] aria-invalid:ring-3 aria-invalid:ring-inset aria-invalid:ring-[#e35a5a]" 
                     />
                     <button 
-                        className="flex items-center justify-center rounded-r-[15px] bg-black transition-colors hover:bg-[#3f3f3f] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-white" 
+                        className="flex items-center justify-center cursor-pointer rounded-r-[15px] bg-black transition-colors hover:bg-[#3f3f3f] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-white" 
                         type="submit" 
                         aria-label="Search for IP address or domain"
                         disabled={loading || !query?.trim()}
