@@ -198,12 +198,12 @@ export default function Home() {
                 ip: result.ip,
                 isp: result.isp,
                 location: {
-                city: result.location.city,
-                region: result.location.region,
-                postalCode: result.location.postalCode,
-                timezone: result.location.timezone,
-                lat: result.location.lat,
-                lng: result.location.lng,
+                    city: result.location.city,
+                    region: result.location.region,
+                    postalCode: result.location.postalCode,
+                    timezone: result.location.timezone,
+                    lat: result.location.lat,
+                    lng: result.location.lng,
                 },
             });
         } catch (err) {
