@@ -58,11 +58,35 @@ export default function Home() {
                     </p>
                 </form>
             </section>
-            <section className="absolute left-1/2 top-[167px] z-20 w-[calc(100%-48px)] max-w-[1110px] -translate-x-1/2 rounded-[15px] bg-white px-6 py-[25px] sm:top-[200px] sm:grid sm:min-h-[161px] sm:grid-cols-4 sm:px-0 sm:py-[37px]" aria-label="IP address details">
-                {DEFAULT_DETAILS.map(([label, value], index) => <article className={`text-center sm:px-8 sm:text-left ${index > 0 ? 'mt-[21px] sm:mt-0 sm:border-l sm:border-dark-gray/35' : ''}`} key={label}><h2 className="m-0 mb-[7px] text-[0.63rem] font-bold uppercase tracking-[0.12em] text-dark-gray sm:mb-[13px] sm:text-[0.75rem]">{label}</h2><p className="m-0 break-words text-[1.25rem] font-medium leading-[1.25] tracking-[-0.02em] sm:text-[1.6rem] sm:leading-[1.18]">{value}</p></article>)}
+            <section 
+                className="absolute left-1/2 top-[167px] z-20 w-[calc(100%-48px)] max-w-[1110px] -translate-x-1/2 rounded-[15px] bg-white px-6 py-[25px] sm:top-[200px] sm:grid sm:min-h-[161px] sm:grid-cols-4 sm:px-0 sm:py-[37px]" 
+                aria-label="IP address details"
+            >
+                {DEFAULT_DETAILS.map(([label, value], index) => 
+                    <article 
+                        className={`text-center sm:px-8 sm:text-left ${index > 0 ? 'mt-[21px] sm:mt-0 sm:border-l sm:border-dark-gray/35' : ''}`} 
+                        key={label}
+                    >
+                        <h2 className="m-0 mb-[7px] text-[0.63rem] font-bold uppercase tracking-[0.12em] text-dark-gray sm:mb-[13px] sm:text-[0.75rem]">
+                            {label}
+                        </h2>
+                        <p className="m-0 break-words text-[1.25rem] font-medium leading-[1.25] tracking-[-0.02em] sm:text-[1.6rem] sm:leading-[1.18]">
+                            {value}
+                        </p>
+                    </article>
+                )}
             </section>
-            <section className="relative z-0 h-[calc(100vh-300px)] min-h-[528px] sm:h-[calc(100vh-280px)] sm:min-h-[520px]" aria-label="Location map">
-                <iframe className="block h-full w-full border-0" title="Map showing the tracked IP address location" src={`https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=12&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+            <section 
+                className="relative z-0 h-[calc(100vh-300px)] min-h-[528px] sm:h-[calc(100vh-280px)] sm:min-h-[520px]" 
+                aria-label="Location map"
+            >
+                <iframe 
+                    className="block h-full w-full border-0" 
+                    title="Map showing the tracked IP address location" 
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=12&output=embed`} 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade" 
+                />
             </section>
         </main>
     );
