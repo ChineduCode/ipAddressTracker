@@ -4,14 +4,14 @@
   "description": "",
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack",
+    "build": "next build",
     "start": "next start"
   },
   "keywords": [],
   "author": "chineduCode",
   "license": "ISC",
   "dependencies": {
-    "next": "^16.1.1",
+    "next": "^15.5.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },
