@@ -40,7 +40,7 @@ export default function Home() {
                         placeholder="Search for any IP address or domain" 
                         aria-describedby="search-error" 
                         aria-invalid={Boolean(error)} 
-                        className="h-[58px] min-w-0 rounded-l-[15px] border-0 px-6 text-[18px] outline-none placeholder:text-dark-gray focus-visible:ring-3 focus-visible:ring-inset focus-visible:ring-[#4f8cff] aria-invalid:ring-3 aria-invalid:ring-inset aria-invalid:ring-[#e35a5a]" 
+                        className="h-[58px] bg-white min-w-0 rounded-l-[15px] border-0 px-6 text-[18px] outline-none placeholder:text-dark-gray focus-visible:ring-3 focus-visible:ring-inset focus-visible:ring-[#4f8cff] aria-invalid:ring-3 aria-invalid:ring-inset aria-invalid:ring-[#e35a5a]" 
                     />
                     <button 
                         className="flex items-center justify-center rounded-r-[15px] bg-black transition-colors hover:bg-[#3f3f3f] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-white" 
