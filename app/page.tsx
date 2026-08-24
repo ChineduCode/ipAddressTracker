@@ -71,6 +71,7 @@ export default function Home() {
                         className="flex items-center justify-center rounded-r-[15px] bg-black transition-colors hover:bg-[#3f3f3f] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-white" 
                         type="submit" 
                         aria-label="Search for IP address or domain"
+                        disabled={loading || !query?.trim()}
                     >
                         <img src="/images/icon-arrow.svg" width="11" height="14" alt="" />
                     </button>
