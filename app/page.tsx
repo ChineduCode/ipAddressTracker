@@ -25,10 +25,12 @@ export default function Home() {
         }
 
         setError('');
-        setMapQuery(searchTerm);
 
         try {
-            
+            const res = await axios.get(
+                `https://geo.ipify.org/api/v2/country?apiKey=${process.env.NEXT_PUBLIC_IPIFY_API_KEY}&ipAddress=${searchTerm}`
+            );
+            console.log(res.data)
         } catch (error) {
             if(process.env.NODE_ENV === "development"){
                 console.log(error)
