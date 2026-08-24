@@ -34,7 +34,6 @@ export default function Home() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
 
-
     const fetchLocation = async (searchTerm = '') => {
         setLoading(true);
         setError('');
