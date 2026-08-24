@@ -30,7 +30,7 @@ const API_KEY = process.env.NEXT_PUBLIC_IPIFY_API_KEY;
 
 export default function Home() {
     const [query, setQuery] = useState('');
-    const [data, setData] = useState<LocationData | null>(null)
+    const [data, setData] = useState<LocationData | null>(null);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
 
