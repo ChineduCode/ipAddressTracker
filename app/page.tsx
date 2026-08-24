@@ -34,7 +34,7 @@ export default function Home() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
 
-    // Fetch data (works for IP, domain, or empty = visitor's IP)
+
     const fetchLocation = async (searchTerm = '') => {
         setLoading(true);
         setError('');
@@ -43,7 +43,7 @@ export default function Home() {
             let url = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`;
 
             if (searchTerm) {
-                // Detect whether the input looks like an IP or a domain
+                // Detecting whether it is a domain or ipaddress
                 const isIp = /^(\d{1,3}\.){3}\d{1,3}$/.test(searchTerm);
                 url += isIp ? `&ipAddress=${searchTerm}` : `&domain=${searchTerm}`;
             }
@@ -79,7 +79,7 @@ export default function Home() {
         }
     };
 
-    // Loading visitor's own IP on rendr
+    // Loading visitor's own IP on 1st rendr
     useEffect(() => {
         fetchLocation();
     }, []);
@@ -94,7 +94,6 @@ export default function Home() {
         fetchLocation(term);
     };
 
-    // Display values for the cards
     const details = data
         ? [
             ['IP Address', data.ip],
