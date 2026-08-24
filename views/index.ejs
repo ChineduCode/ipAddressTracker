@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#4c47a3">
-  <title>IP Address Tracker</title>
-  <link rel="icon" type="image/png" href="/images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4c47a3">
+    <title>IP Address Tracker</title>
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <main class="tracker">
-    <section class="hero" aria-labelledby="page-title">
-      <h1 id="page-title">IP Address Tracker</h1>
-      <form class="search-form" id="search-form" novalidate>
-        <label class="sr-only" for="ip-address">IP address or domain</label>
-        <input id="ip-address" name="ipAddress" type="search" autocomplete="off" placeholder="Search for any IP address or domain" aria-describedby="search-error">
-        <button type="submit" aria-label="Search for IP address or domain"><img src="/images/icon-arrow.svg" width="11" height="14" alt=""></button>
-        <p class="search-error" id="search-error" role="alert"></p>
-      </form>
-    </section>
-    <section class="results" aria-label="IP address details">
-      <article class="detail"><h2>IP Address</h2><p>192.212.174.101</p></article>
-      <article class="detail"><h2>Location</h2><p>Brooklyn, NY 10001</p></article>
-      <article class="detail"><h2>Timezone</h2><p>UTC -05:00</p></article>
-      <article class="detail"><h2>ISP</h2><p>SpaceX Starlink</p></article>
-    </section>
-    <section class="map" aria-label="Location map">
-      <iframe id="map-frame" title="Map showing the tracked IP address location" src="https://www.google.com/maps?q=Brooklyn%2C%20NY%2010001&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-  </main>
-  <script>
-    const form = document.querySelector('#search-form');
-    const input = document.querySelector('#ip-address');
-    const error = document.querySelector('#search-error');
-    const map = document.querySelector('#map-frame');
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const query = input.value.trim();
-      if (!query) {
-        error.textContent = 'Enter an IP address or domain to search.';
-        input.setAttribute('aria-invalid', 'true');
-        input.focus();
-        return;
-      }
-      error.textContent = '';
-      input.removeAttribute('aria-invalid');
-      map.src = `https://www.google.com/maps?q=${encodeURIComponent(query)}&z=12&output=embed`;
-    });
-  </script>
+    <main class="tracker">
+        <section class="hero" aria-labelledby="page-title">
+            <h1 id="page-title">IP Address Tracker</h1>
+            <form class="search-form" id="search-form" novalidate>
+                <label class="sr-only" for="ip-address">IP address or domain</label>
+                <input id="ip-address" name="ipAddress" type="search" autocomplete="off" placeholder="Search for any IP address or domain" aria-describedby="search-error">
+                <button type="submit" aria-label="Search for IP address or domain"><img src="/images/icon-arrow.svg" width="11" height="14" alt=""></button>
+                <p class="search-error" id="search-error" role="alert"></p>
+            </form>
+        </section>
+        <section class="results" aria-label="IP address details">
+            <article class="detail"><h2>IP Address</h2><p>192.212.174.101</p></article>
+            <article class="detail"><h2>Location</h2><p>Brooklyn, NY 10001</p></article>
+            <article class="detail"><h2>Timezone</h2><p>UTC -05:00</p></article>
+            <article class="detail"><h2>ISP</h2><p>SpaceX Starlink</p></article>
+        </section>
+        <section class="map" aria-label="Location map">
+            <iframe id="map-frame" title="Map showing the tracked IP address location" src="https://www.google.com/maps?q=Brooklyn%2C%20NY%2010001&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+    <script>
+        const form = document.querySelector('#search-form');
+        const input = document.querySelector('#ip-address');
+        const error = document.querySelector('#search-error');
+        const map = document.querySelector('#map-frame');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const query = input.value.trim();
+            if (!query) {
+                error.textContent = 'Enter an IP address or domain to search.';
+                input.setAttribute('aria-invalid', 'true');
+                input.focus();
+                return;
+            }
+            error.textContent = '';
+            input.removeAttribute('aria-invalid');
+            map.src = `https://www.google.com/maps?q=${encodeURIComponent(query)}&z=12&output=embed`;
+        });
+    </script>
 </body>
 </html>
