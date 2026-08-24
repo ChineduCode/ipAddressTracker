@@ -2,16 +2,16 @@
   "name": "ip-address-tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "tsx watch /src/app.ts",
+    "dev": "tsx --watch app.ts",
     "build": "tsc",
-    "start": "node /dist/app.js"
+    "start": "node app.js"
   },
   "keywords": [],
-  "type": "module",
   "author": "chineduCode",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "ejs": "^6.0.1",
@@ -22,6 +22,7 @@
     "@types/express": "^5.0.6",
     "@types/node": "^26.2.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.23.12",
     "typescript": "^7.0.2"
   }
 }
