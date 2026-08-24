@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, SubmitEvent } from 'react';
+import axios from "axios";
 
 const DEFAULT_DETAILS = [
     ['IP Address', '192.212.174.101'],
@@ -13,13 +14,35 @@ export default function Home() {
     const [query, setQuery] = useState('');
     const [mapQuery, setMapQuery] = useState('Brooklyn, NY 10001');
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
+    async function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
         event.preventDefault();
         const searchTerm = query.trim();
-        if (!searchTerm) { setError('Enter an IP address or domain to search.'); return; }
+        if (!searchTerm) { 
+            setError('Enter an IP address or domain to search.'); 
+            return; 
+        }
+
         setError('');
         setMapQuery(searchTerm);
+
+        try {
+            
+        } catch (error) {
+            if(process.env.NODE_ENV === "development"){
+                console.log(error)
+            }
+            if(axios.isAxiosError(error)){
+                setError(error.response?.data.message || error.response?.data.error)
+            } else if(error instanceof Error){
+                setError(error.message)
+            } else {
+                setError("An unknown error occured")
+            }
+        } finally {
+            setLoading(false);
+        }
     }
 
     return (
