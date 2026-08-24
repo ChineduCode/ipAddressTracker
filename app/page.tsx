@@ -116,13 +116,13 @@ export default function Home() {
     return (
         <main className="relative min-h-screen overflow-hidden font-rubik text-very-dark-gray">
             {/* Header */}
-            <section className="relative z-10 flex h-[300px] flex-col items-center bg-[#4c47a3] bg-[url('/images/pattern-bg-mobile.png')] bg-cover bg-center px-6 pt-[26px] sm:h-[280px] sm:bg-[url('/images/pattern-bg-desktop.png')] sm:pt-8">
+            <section className="relative z-10 flex h-[300px] flex-col items-center bg-[#4c47a3] bg-[url('/images/pattern-bg-mobile.png')] bg-cover bg-center px-5 pt-[26px] sm:h-[280px] sm:bg-[url('/images/pattern-bg-desktop.png')] sm:pt-8">
                 <h1 className="m-0 text-[1.6rem] font-medium leading-tight tracking-[-0.02em] text-white sm:text-[2rem]">
                     IP Address Tracker
                 </h1>
 
                 <form
-                    className="mt-6 grid w-full max-w-[555px] grid-cols-[minmax(0,1fr)_58px]"
+                    className="mt-6 grid w-full max-w-[600px] sm:max-w-[555px] grid-cols-[minmax(0,1fr)_58px]"
                     onSubmit={handleSubmit}
                     noValidate
                 >
@@ -138,7 +138,7 @@ export default function Home() {
                         aria-describedby="search-error"
                         aria-invalid={Boolean(error)}
                         disabled={loading}
-                        className="h-[58px] min-w-0 rounded-l-[15px] border-0 bg-white px-6 text-[18px] outline-none placeholder:text-dark-gray focus-visible:ring-3 focus-visible:ring-inset focus-visible:ring-[#4f8cff] aria-invalid:ring-3 aria-invalid:ring-inset aria-invalid:ring-[#e35a5a] disabled:opacity-70"
+                        className="h-[58px] min-w-0 rounded-l-[15px] border-0 bg-white px-5 text-sm sm:px-6 sm:text-[18px] outline-none placeholder:text-dark-gray focus-visible:ring-3 focus-visible:ring-inset focus-visible:ring-[#4f8cff] aria-invalid:ring-3 aria-invalid:ring-inset aria-invalid:ring-[#e35a5a] disabled:opacity-70"
                     />
                     <button
                         type="submit"
@@ -165,7 +165,7 @@ export default function Home() {
 
             {/* Info Cards */}
             <section
-                className="absolute left-1/2 top-[167px] z-20 w-[calc(100%-48px)] max-w-[555px] md:max-w-[1110px] -translate-x-1/2 rounded-[15px] bg-white px-6 py-[25px] shadow-lg md:top-[200px] md:grid md:min-h-[161px] md:grid-cols-4 md:px-0 md:py-[37px]"
+                className="absolute left-1/2 top-[167px] z-20 w-[calc(100%-45px)] md:max-w-[1110px] -translate-x-1/2 rounded-[15px] bg-white px-6 py-[25px] shadow-lg md:top-[200px] md:grid md:min-h-[161px] md:grid-cols-4 md:px-0 md:py-[37px]"
                 aria-label="IP address details"
             >
                 {details.map(([label, value], index) => (
