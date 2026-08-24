@@ -313,19 +313,19 @@ export default function Home() {
                 aria-label="IP address details"
             >
                 {details.map(([label, value], index) => (
-                <article
-                    key={label}
-                    className={`text-center sm:px-8 sm:text-left ${
-                    index > 0 ? 'mt-[21px] sm:mt-0 sm:border-l sm:border-dark-gray/35' : ''
-                    }`}
-                >
-                    <h2 className="m-0 mb-[7px] text-[0.63rem] font-bold uppercase tracking-[0.12em] text-dark-gray sm:mb-[13px] sm:text-[0.75rem]">
-                    {label}
-                    </h2>
-                    <p className="m-0 break-words text-[1.25rem] font-medium leading-[1.25] tracking-[-0.02em] sm:text-[1.6rem] sm:leading-[1.18]">
-                    {loading ? '...' : value}
-                    </p>
-                </article>
+                    <article
+                        key={label}
+                        className={`text-center sm:px-8 sm:text-left ${
+                        index > 0 ? 'mt-[21px] sm:mt-0 sm:border-l sm:border-dark-gray/35' : ''
+                        }`}
+                    >
+                        <h2 className="m-0 mb-[7px] text-[0.63rem] font-bold uppercase tracking-[0.12em] text-dark-gray sm:mb-[13px] sm:text-[0.75rem]">
+                        {label}
+                        </h2>
+                        <p className="m-0 break-words text-[1.25rem] font-medium leading-[1.25] tracking-[-0.02em] sm:text-[1.6rem] sm:leading-[1.18]">
+                        {loading ? '...' : value}
+                        </p>
+                    </article>
                 ))}
             </section>
 
