@@ -165,7 +165,7 @@ export default function Home() {
 
             {/* Info Cards */}
             <section
-                className="absolute left-1/2 top-[167px] z-20 w-[calc(100%-48px)] max-w-[1110px] -translate-x-1/2 rounded-[15px] bg-white px-6 py-[25px] shadow-lg md:top-[200px] md:grid md:min-h-[161px] md:grid-cols-4 md:px-0 md:py-[37px]"
+                className="absolute left-1/2 top-[167px] z-20 w-[calc(100%-48px)] max-w-[555px] md:max-w-[1110px] -translate-x-1/2 rounded-[15px] bg-white px-6 py-[25px] shadow-lg md:top-[200px] md:grid md:min-h-[161px] md:grid-cols-4 md:px-0 md:py-[37px]"
                 aria-label="IP address details"
             >
                 {details.map(([label, value], index) => (
